@@ -5,6 +5,9 @@ import "./index.css";
 import Root from "./Components/Root/Root"; //import from Root jsx file
 import Error from "./Components/Error/Error";
 import Home from "./Components/Home/Home";
+import Books from "./Components/Books/Books";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import BookDetails from "./Components/BookDetails/BookDetails";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,18 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>
       },
+      {
+        path: "/Dashboard",
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: "/Books",
+        element: <Books></Books>,
+      
+      },
+        {path: "/Books/:id",
+            element: <BookDetails/>
+          },
     ],
   },
 ]);

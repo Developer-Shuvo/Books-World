@@ -1,4 +1,4 @@
-import bannerImg from "../../assets/images/banner-book.jpg";
+import bannerImg from "../../assets/images/books.png";
 
 const Home = () => {
   return (
@@ -9,14 +9,14 @@ const Home = () => {
       <h1 className="text-4xl lg:text-6xl font-bold">
         Books to Freshen Up <br /> your Bookshelf
       </h1>
-      <button className="text-white bg-lime-600 px-6 py-3 rounded-lg mt-6">
+      <button className="text-white bg-lime-600 px-6 py-3 rounded-lg lg:mt-8 mt-5">
         View The List
       </button>
     </div>
 
     {/* Image Section */}
     <img
-      className="h-[260px] w-[260px] lg:h-[400px] lg:w-[500px] rounded-lg object-cover lg:pr-20"
+      className="h-[260px] w-[260px] lg:h-[500px] lg:w-[500px] rounded-lg object-cover lg:pr-20"
       src={bannerImg}
       alt="Books Banner"
     />

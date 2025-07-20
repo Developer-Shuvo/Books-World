@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
-      <header class="text-slate-700 container relative mx-auto flex flex-col overflow-hidden px-4 py-4 lg:flex-row lg:items-center">
+      <header class="text-slate-700 relative mx-auto flex flex-col overflow-hidden  py-4 lg:flex-row lg:items-center">
         <a
           href="#"
           class="flex items-center whitespace-nowrap text-2xl font-black"
         >
-          <span class="mr-2 w-8">
+          <span class=" ">
             <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
           </span>
           Books World
@@ -37,20 +39,20 @@ const Navbar = () => {
         >
           <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
             <li class="lg:mr-12">
-              <a
+              <Link
                 class="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-                href="#"
+                href="/"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li class="lg:mr-12">
-              <a
+              <Link
                 class="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-                href="#"
+                to ="/Books"
               >
                 Listed Books
-              </a>
+              </Link>
             </li>
             <li class="lg:mr-12">
               <a
@@ -63,7 +65,7 @@ const Navbar = () => {
           </ul>
           <hr class="mt-4 w-full lg:hidden" />
           <div class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
-                <a
+            <a
               href="#"
               title=""
               class="whitespace-nowrap rounded-xl bg-lime-600 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 hover:bg-lime-700"
