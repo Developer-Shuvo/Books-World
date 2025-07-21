@@ -65,20 +65,21 @@ const Navbar = () => {
           </ul>
           <hr class="mt-4 w-full lg:hidden" />
           <div class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
-            <a
-              href="#"
+            <Link
+              to="/SignIn"
               title=""
-              class="whitespace-nowrap rounded-xl bg-lime-600 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 hover:bg-lime-700"
+              
             >
-              Sing In
-            </a>
-            <a
-              href="#"
+              <button class="whitespace-nowrap rounded-xl bg-lime-600 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 hover:bg-lime-700"> Sing In</button>
+             
+            </Link>
+            <Link
+              to="/SignUp"
               title=""
-              class="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600"
+              class="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 hover:bg-blue-600"
             >
-              Sing Up
-            </a>
+             <button> Sing Up</button>
+            </Link>
           </div>
         </nav>
       </header>{" "}
