@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import bannerBook from "../../assets/images/banner-book.jpg";
+
 import { useEffect, useState } from "react";
-import lightBook from "../../assets/images/light-book.jpg";
+import lightBook from "../../assets/images/banner-book.jpg";
 
 const books = [
   {
@@ -93,8 +93,8 @@ const books = [
 const BookDetails = () => {
   //set-1 get id
   const { id } = useParams();
-  // get singel book/ data store this userState
-  const [getSingelbook, setBook] = useState();
+  // get single book/ data store this userState
+  const [getSingleBook, setBook] = useState();
 
   useEffect(() => {
     const result = books.find((book) => book?.id === Number(id));
@@ -102,23 +102,25 @@ const BookDetails = () => {
   }, []);
 
   return (
-    <div className="grid lg:grid-cols-2 items-center  lg:gap-10">
-      <div className="borders">
-        <img className="lg:h-[600px] " src={getSingelbook?.cover} alt="" />
+
+    // Start from Here
+    <div className="grid lg:grid-cols-2 items-center  lg:gap-10 mt-4">
+      <div className="">
+        <img className="lg:h-[600px]" src={getSingleBook?.cover} alt="" />
       </div>
       {/* Details Text */}
       <div>
-        <h1 className="text-5xl font-bold">{getSingelbook?.title}</h1>
+        <h1 className="text-5xl font-bold">{getSingleBook?.title}</h1>
         <h2 className="mt-6 text-lg text-gray-700 font-semibold">
-          Writer : {getSingelbook?.writer}
+          Writer : {getSingleBook?.writer}
         </h2>
         {/* line____________________________ */}
-        <div className="border-b  border-lime-500 mt-6"></div>
+        <div className="border-b  border-green-700 mt-6"></div>
         <h2 className="text-lg text-gray-700 font-semibold mt-2 mb-2">
           Fiction
         </h2>
         {/* line____________________________ */}
-        <div className="border-b border-lime-500 "></div>
+        <div className="border-b border-green-700 "></div>
         {/* Review */}
         <p className="text-gray-700 mt-6 ">
           <span className=" text-lg text-black font-bold">Review : </span> Sit

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import lightBook from "../../assets/images/light-book.jpg";
+import lightBook from "../../assets/images/banner-book.jpg";
 
 //Here is Books Object 12
 

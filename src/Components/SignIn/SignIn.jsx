@@ -2,12 +2,11 @@ const SignIn = () => {
   return (
     <>
       <div className="pt-5 pb-8">
-        <div class=" max-w-[600px] mx-auto space-y-3 rounded-md bg-white p-6 shadow-xl lg:p-10 border border-gray-100 m-10">
-          <div className="text-center">
-            <h1 class="text-xl font-semibold lg:text-2xl">Login</h1>
-            <p class="pb-4 text-gray-500">Sign in to access your account</p>
+         <div className="text-center">
+            <h1 class="text-3xl font-black leading-4 sm:text-5xl xl:text-6xl">Login</h1>
+            <p class="text-lg sm:text-xl mt-4">Sign in to access your account</p>
           </div>
-
+        <div class=" max-w-[600px] mx-auto space-y-3 rounded-md bg-white p-6 shadow-xl lg:p-10 border border-gray-100 m-10">
           {/* User Name */}
           <div>
             <label class=""> Username </label>

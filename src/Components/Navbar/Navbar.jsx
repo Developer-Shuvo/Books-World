@@ -38,25 +38,25 @@ const Navbar = () => {
           class="peer-checked:pt-8 peer-checked:max-h-60 flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row"
         >
           <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
-            <li class="lg:mr-12">
+            <li class="mr-1">
               <Link
-                class="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+                className=" text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white  "
                 href="/"
               >
                 Home
               </Link>
             </li>
-            <li class="lg:mr-12">
+            <li class="mr-1">
               <Link
-                class="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-                to ="/Books"
+                class="text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white "
+                to="/Books"
               >
                 Listed Books
               </Link>
             </li>
-            <li class="lg:mr-12">
+            <li class="mr-1">
               <a
-                class="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+                class="text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white "
                 href="#"
               >
                 Page To Read
@@ -65,20 +65,18 @@ const Navbar = () => {
           </ul>
           <hr class="mt-4 w-full lg:hidden" />
           <div class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
-            <Link
-              to="/SignIn"
-              title=""
-              
-            >
-              <button class="whitespace-nowrap rounded-xl bg-lime-600 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 hover:bg-lime-700"> Sing In</button>
-             
+            <Link to="/SignIn" title="">
+              <button class="whitespace-nowrap rounded-xl bg-lime-600 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 hover:bg-lime-700">
+                {" "}
+                Sing In
+              </button>
             </Link>
             <Link
               to="/SignUp"
               title=""
               class="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 hover:bg-blue-600"
             >
-             <button> Sing Up</button>
+              <button> Sing Up</button>
             </Link>
           </div>
         </nav>

@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div class="bg-white text-gray-900">
-      <div class=" ">
+    <div class="bg-white text-gray-900 ">
+      {/* Title */}
+      <div class="">
         <div class="mx-auto w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
           <div class="mx-2 py-2 text-center md:mx-auto md:w-2/3 md:py-10">
             <h1 class="mb-4 text-3xl font-black leading-4 sm:text-5xl xl:text-6xl">
@@ -17,8 +18,8 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-      <div class="md:w-2/3 mx-auto w-full pb-20 sm:max-w-screen-sm md:max-w-screen-md lg:w-1/3 lg:max-w-screen-lg xl:max-w-screen-xl">
-        <form class="shadow-lg mb-4 rounded-lg border border-gray-100 py-10 px-8">
+      <div class="md:w-2/3 mx-auto pb-10 sm:max-w-screen-sm md:max-w-screen-md lg:w-[600px] lg:max-w-screen-lg xl:max-w-screen-xl ">
+        <form class="shadow-lg mb-4 rounded-lg border border-gray-100 py-10 px-10">
           {/* Name */}
           <div class="mb-4">
             <label class="mb-2 block text-sm font-bold" for="text">
