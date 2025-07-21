@@ -1,15 +1,117 @@
+import { useParams } from "react-router-dom";
 import bannerBook from "../../assets/images/banner-book.jpg";
+import { useEffect, useState } from "react";
+import lightBook from "../../assets/images/light-book.jpg";
+
+const books = [
+  {
+    id: 1,
+    title: "Atomic Habits",
+    writer: "James Clear",
+    rating: 4.8,
+    cover: lightBook,
+  },
+  {
+    id: 2,
+    title: "The Subtle Art of Not Giving a F*ck",
+    writer: "Mark Manson",
+    rating: 4.5,
+    cover: lightBook,
+  },
+  {
+    id: 3,
+    title: "Deep Work",
+    writer: "Cal Newport",
+    rating: 4.7,
+    cover: lightBook,
+  },
+  {
+    id: 4,
+    title: "Rich Dad Poor Dad",
+    writer: "Robert T. Kiyosaki",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 5,
+    title: "Think and Grow Rich",
+    writer: "Napoleon Hill",
+    rating: 4.4,
+    cover: lightBook,
+  },
+  {
+    id: 6,
+    title: "The Alchemist",
+    writer: "Paulo Coelho",
+    rating: 4.3,
+    cover: lightBook,
+  },
+  {
+    id: 7,
+    title: "Start With Why",
+    writer: "Simon Sinek",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 8,
+    title: "Can't Hurt Me",
+    writer: "David Goggins",
+    rating: 4.8,
+    cover: lightBook,
+  },
+  {
+    id: 9,
+    title: "How to Win Friends and Influence People",
+    writer: "Dale Carnegie",
+    rating: 4.7,
+    cover: lightBook,
+  },
+  {
+    id: 10,
+    title: "Ego is the Enemy",
+    writer: "Ryan Holiday",
+    rating: 4.5,
+    cover: lightBook,
+  },
+  {
+    id: 11,
+    title: "The Power of Now",
+    writer: "Eckhart Tolle",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 12,
+    title: "Zero to One",
+    writer: "Peter Thiel",
+    rating: 4.4,
+    cover: lightBook,
+  },
+];
 
 const BookDetails = () => {
+  //set-1 get id
+  const { id } = useParams();
+  // get singel book/ data store this userState
+  const [getSingelbook, setBook] = useState();
+
+  useEffect(() => {
+    const result = books.find((book) => book?.id === Number(id));
+    setBook(result);
+  }, []);
+
   return (
     <div className="grid lg:grid-cols-2 items-center  lg:gap-10">
       <div className="borders">
-        <img className="lg:h-[600px] " src={bannerBook} alt="" />
+        <img className="lg:h-[600px] " src={getSingelbook?.cover} alt="" />
       </div>
       {/* Details Text */}
       <div>
-        <h1 className="text-5xl font-bold">Atomic Habits</h1>
-        <h2 className="mt-6 text-lg text-gray-700 font-semibold">Writer</h2>
+        <h1 className="text-5xl font-bold">{getSingelbook?.title}</h1>
+        <h2 className="mt-6 text-lg text-gray-700 font-semibold">
+          Writer : {getSingelbook?.writer}
+        </h2>
         {/* line____________________________ */}
         <div className="border-b  border-lime-500 mt-6"></div>
         <h2 className="text-lg text-gray-700 font-semibold mt-2 mb-2">
@@ -71,13 +173,17 @@ const BookDetails = () => {
         </div>
 
         {/* Button */}
-        <div className="flex items-center gap-6 mt-8" >
-            <a to="">
-                <button className="border-2 border-gray-400 py-2 px-5 font-bold rounded-lg hover:border-blue-700">Read</button>
-            </a>
-            <a to="">
-                <button className="bg-blue-700 text-white py-2 px-5 font-bold rounded-lg hover:border-lime-600">Wishlist</button>
-            </a>
+        <div className="flex items-center gap-6 mt-8">
+          <a to="">
+            <button className="border-2 border-gray-400 py-2 px-5 font-bold rounded-lg hover:border-blue-700">
+              Read
+            </button>
+          </a>
+          <a to="">
+            <button className="bg-blue-700 text-white py-2 px-5 font-bold rounded-lg hover:border-lime-600">
+              Wishlist
+            </button>
+          </a>
         </div>
       </div>
     </div>

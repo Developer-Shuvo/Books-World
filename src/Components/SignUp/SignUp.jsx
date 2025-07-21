@@ -5,15 +5,13 @@ const SignUp = () => {
     <div class="bg-white text-gray-900">
       <div class=" ">
         <div class="mx-auto w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
-          <div class="mx-2 py-8 text-center md:mx-auto md:w-2/3 md:py-20">
+          <div class="mx-2 py-2 text-center md:mx-auto md:w-2/3 md:py-10">
             <h1 class="mb-4 text-3xl font-black leading-4 sm:text-5xl xl:text-6xl">
               Sign up
             </h1>
             <div class="text-lg sm:text-xl">
               <div class="">
-                <p class="mb-4">
-                 Sign Up For New Experience of Books world
-                </p>
+                <p class="mb-2">Sign Up For New Experience of Books world</p>
               </div>
             </div>
           </div>
@@ -21,25 +19,41 @@ const SignUp = () => {
       </div>
       <div class="md:w-2/3 mx-auto w-full pb-20 sm:max-w-screen-sm md:max-w-screen-md lg:w-1/3 lg:max-w-screen-lg xl:max-w-screen-xl">
         <form class="shadow-lg mb-4 rounded-lg border border-gray-100 py-10 px-8">
+          {/* Name */}
+          <div class="mb-4">
+            <label class="mb-2 block text-sm font-bold" for="text">
+              Name
+            </label>
+            <input
+              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none focus:border-lime-600"
+              id="name"
+              type="name"
+              placeholder="Full Name"
+              required=""
+            />
+            <span class="my-2 block"></span>
+          </div>
+          {/* E-mail */}
           <div class="mb-4">
             <label class="mb-2 block text-sm font-bold" for="email">
               E-mail
             </label>
             <input
-              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
+              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none focus:border-lime-600"
               id="email"
               type="email"
-              placeholder="email"
+              placeholder="E-mail"
               required=""
             />
             <span class="my-2 block"></span>
           </div>
+          {/* Phone */}
           <div class="mb-4">
             <label class="mb-2 block text-sm font-bold" for="phone">
               Phone
             </label>
             <input
-              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
+              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none focus:border-lime-600"
               id="phone"
               type="phone"
               placeholder="Phone"
@@ -47,25 +61,27 @@ const SignUp = () => {
             />
             <span class="my-2 block"></span>
           </div>
+          {/* Password */}
           <div class="mb-4">
             <label class="mb-2 block text-sm font-bold" for="password">
               Password
             </label>
             <input
-              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
+              class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none focus:border-lime-600"
               id="password"
               type="password"
-              placeholder="******************"
+              placeholder="Minimum 8 digit ********"
               required=""
             />
           </div>
+          {/* Country */}
           <div class="mb-4">
             <label class="mb-2 block text-sm font-bold" for="country">
               Country
             </label>
             {/* All Country Name */}
             <select
-              class="shadow-sm mb-3 cursor-pointer w-full appearance-none rounded border border-gray-300 py-2 px-3  leading-tight outline-none ring-blue-500 focus:ring"
+              class="shadow-sm mb-3 cursor-pointer w-full appearance-none rounded border border-gray-300 py-2 px-3  leading-tight outline-none focus:border-lime-600"
               id="country"
               required=""
             >
@@ -824,7 +840,7 @@ const SignUp = () => {
           <div class="flex items-center">
             <div class="flex-1"></div>
             <button
-              class="cursor-pointer rounded bg-lime-600 py-2 px-8 text-center text-lg font-bold  text-white"
+              class="cursor-pointer rounded bg-lime-700 py-2 px-8 text-center text-lg font-bold  text-white"
               type="submit"
             >
               Create account

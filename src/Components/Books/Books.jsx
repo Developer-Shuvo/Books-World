@@ -1,94 +1,95 @@
 import { Link } from "react-router-dom";
 import lightBook from "../../assets/images/light-book.jpg";
-const Books = () => {
-  //Here is Books Object 12
-  const books = [
-    {
-      id: 1,
-      title: "Atomic Habits",
-      writer: "James Clear",
-      rating: 4.8,
-      cover: lightBook,
-    },
-    {
-      id: 2,
-      title: "The Subtle Art of Not Giving a F*ck",
-      writer: "Mark Manson",
-      rating: 4.5,
-      cover: lightBook,
-    },
-    {
-      id: 3,
-      title: "Deep Work",
-      writer: "Cal Newport",
-      rating: 4.7,
-      cover: lightBook,
-    },
-    {
-      id: 4,
-      title: "Rich Dad Poor Dad",
-      writer: "Robert T. Kiyosaki",
-      rating: 4.6,
-      cover: lightBook,
-    },
-    {
-      id: 5,
-      title: "Think and Grow Rich",
-      writer: "Napoleon Hill",
-      rating: 4.4,
-      cover: lightBook,
-    },
-    {
-      id: 6,
-      title: "The Alchemist",
-      writer: "Paulo Coelho",
-      rating: 4.3,
-      cover: lightBook,
-    },
-    {
-      id: 7,
-      title: "Start With Why",
-      writer: "Simon Sinek",
-      rating: 4.6,
-      cover: lightBook,
-    },
-    {
-      id: 8,
-      title: "Can't Hurt Me",
-      writer: "David Goggins",
-      rating: 4.8,
-      cover: lightBook,
-    },
-    {
-      id: 9,
-      title: "How to Win Friends and Influence People",
-      writer: "Dale Carnegie",
-      rating: 4.7,
-      cover: lightBook,
-    },
-    {
-      id: 10,
-      title: "Ego is the Enemy",
-      writer: "Ryan Holiday",
-      rating: 4.5,
-      cover: lightBook,
-    },
-    {
-      id: 11,
-      title: "The Power of Now",
-      writer: "Eckhart Tolle",
-      rating: 4.6,
-      cover: lightBook,
-    },
-    {
-      id: 12,
-      title: "Zero to One",
-      writer: "Peter Thiel",
-      rating: 4.4,
-      cover: lightBook,
-    },
-  ];
 
+//Here is Books Object 12
+
+ const books = [
+  {
+    id: 1,
+    title: "Atomic Habits",
+    writer: "James Clear",
+    rating: 4.8,
+    cover: lightBook,
+  },
+  {
+    id: 2,
+    title: "The Subtle Art of Not Giving a F*ck",
+    writer: "Mark Manson",
+    rating: 4.5,
+    cover: lightBook,
+  },
+  {
+    id: 3,
+    title: "Deep Work",
+    writer: "Cal Newport",
+    rating: 4.7,
+    cover: lightBook,
+  },
+  {
+    id: 4,
+    title: "Rich Dad Poor Dad",
+    writer: "Robert T. Kiyosaki",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 5,
+    title: "Think and Grow Rich",
+    writer: "Napoleon Hill",
+    rating: 4.4,
+    cover: lightBook,
+  },
+  {
+    id: 6,
+    title: "The Alchemist",
+    writer: "Paulo Coelho",
+    rating: 4.3,
+    cover: lightBook,
+  },
+  {
+    id: 7,
+    title: "Start With Why",
+    writer: "Simon Sinek",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 8,
+    title: "Can't Hurt Me",
+    writer: "David Goggins",
+    rating: 4.8,
+    cover: lightBook,
+  },
+  {
+    id: 9,
+    title: "How to Win Friends and Influence People",
+    writer: "Dale Carnegie",
+    rating: 4.7,
+    cover: lightBook,
+  },
+  {
+    id: 10,
+    title: "Ego is the Enemy",
+    writer: "Ryan Holiday",
+    rating: 4.5,
+    cover: lightBook,
+  },
+  {
+    id: 11,
+    title: "The Power of Now",
+    writer: "Eckhart Tolle",
+    rating: 4.6,
+    cover: lightBook,
+  },
+  {
+    id: 12,
+    title: "Zero to One",
+    writer: "Peter Thiel",
+    rating: 4.4,
+    cover: lightBook,
+  },
+];
+const Books = () => {
   return (
     <>
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7">
@@ -131,7 +132,7 @@ const Books = () => {
                     </h1>
                   </div>
                   {/*Details Button */}
-                  <Link to="/Books/:id">
+                  <Link to={`/Books/${book.id}`}>
                     <button className="text-sm font-semibold bg-green-700 rounded-lg py-1 px-3 text-white">
                       See Details
                     </button>
