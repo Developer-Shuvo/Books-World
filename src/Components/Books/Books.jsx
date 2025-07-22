@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import lightBook from "../../assets/images/banner-book.jpg";
 
 //Here is Books Object 12
-const books = [
+export const books = [
   {
     id: 1,
     title: "Atomic Habits",
@@ -158,10 +157,10 @@ const Books = () => {
           <>
             <article
               key={book?.id}
-              class="mb-4 overflow-hidden rounded-xl border text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl"
+              class="mb-4 overflow-hidden rounded-xl border  text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl hover:shadow-yellow-600"
             >
               {/* card image */}
-              <div className="w-full h-[220px] overflow-hidden rounde">
+              <div className="w-full h-[220px] overflow-hidden">
                 <img
                   src={book.cover}
                   alt=""
@@ -192,10 +191,11 @@ const Books = () => {
                   </div>
                   {/*Details Button */}
                   {/* // এখান থেকে আমার সব বইয়ের আইডি Book Details পেইজে পাঠানো হয়েছে। */}
-                  <Link to={`/Books/${book.id}`}>
-                    <button className="text-sm font-semibold bg-green-700 rounded-lg py-1 px-3 text-white">
-                      See Details
-                    </button>
+                  <Link
+                    to={`/Books/${book?.id}`}
+                    className="text-sm font-semibold bg-green-700 rounded-lg py-1 px-3 text-white inline-block"
+                  >
+                    See Details
                   </Link>
                 </div>
 

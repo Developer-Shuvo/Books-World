@@ -1,94 +1,9 @@
 import { useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
-import lightBook from "../../assets/images/banner-book.jpg";
+import { books } from "../Books/Books";
 
-const books = [
-  {
-    id: 1,
-    title: "Atomic Habits",
-    writer: "James Clear",
-    rating: 4.8,
-    cover: lightBook,
-  },
-  {
-    id: 2,
-    title: "The Subtle Art of Not Giving a F*ck",
-    writer: "Mark Manson",
-    rating: 4.5,
-    cover: lightBook,
-  },
-  {
-    id: 3,
-    title: "Deep Work",
-    writer: "Cal Newport",
-    rating: 4.7,
-    cover: lightBook,
-  },
-  {
-    id: 4,
-    title: "Rich Dad Poor Dad",
-    writer: "Robert T. Kiyosaki",
-    rating: 4.6,
-    cover: lightBook,
-  },
-  {
-    id: 5,
-    title: "Think and Grow Rich",
-    writer: "Napoleon Hill",
-    rating: 4.4,
-    cover: lightBook,
-  },
-  {
-    id: 6,
-    title: "The Alchemist",
-    writer: "Paulo Coelho",
-    rating: 4.3,
-    cover: lightBook,
-  },
-  {
-    id: 7,
-    title: "Start With Why",
-    writer: "Simon Sinek",
-    rating: 4.6,
-    cover: lightBook,
-  },
-  {
-    id: 8,
-    title: "Can't Hurt Me",
-    writer: "David Goggins",
-    rating: 4.8,
-    cover: lightBook,
-  },
-  {
-    id: 9,
-    title: "How to Win Friends and Influence People",
-    writer: "Dale Carnegie",
-    rating: 4.7,
-    cover: lightBook,
-  },
-  {
-    id: 10,
-    title: "Ego is the Enemy",
-    writer: "Ryan Holiday",
-    rating: 4.5,
-    cover: lightBook,
-  },
-  {
-    id: 11,
-    title: "The Power of Now",
-    writer: "Eckhart Tolle",
-    rating: 4.6,
-    cover: lightBook,
-  },
-  {
-    id: 12,
-    title: "Zero to One",
-    writer: "Peter Thiel",
-    rating: 4.4,
-    cover: lightBook,
-  },
-];
+
 
 const BookDetails = () => {
   //step:1 -- এখানে Books.jsx থেকে পাঠানো আইডি কে UseParams দিয়ে ধরা হয়েছে ।
@@ -102,7 +17,7 @@ const BookDetails = () => {
   //  Find করে প্রত্যেকটা বইয়ের আইডি কে ধরা হইয়েছে এবং
   //  Number(id); এটা দিয়ে স্ট্রিং এ থাকা আইডি কে নাম্বারে পরিবর্তন করা হইছে।
   useEffect(() => {
-    const result = books.find((book) => book?.id === Number(id));
+    const result = books?.find((book) => book?.id === Number(id));
     setBook(result);
   }, [id]);
 
@@ -110,7 +25,7 @@ const BookDetails = () => {
     // Start from Here
     <div className="grid lg:grid-cols-2 items-center  lg:gap-10 mt-4">
       <div className="">
-        <img className="lg:h-[600px]" src={`/src/assets/images/1.jpg ${getSingleBook.cover}`} alt="" />
+        <img className="lg:h-[600px]" src={`${getSingleBook?.cover}`} alt="" />
       </div>
       {/* Details Text */}
       <div>

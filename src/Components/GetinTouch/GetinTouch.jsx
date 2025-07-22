@@ -1,7 +1,7 @@
 const GetinTouch = () => {
   return (
     <section id="CallMe" class="relative py-14 mt-[100px] bg-black">
-      <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-purple-600 top-[200px] ml-[20%]"></div>
+      <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-lime-600 top-[200px] ml-[20%]"></div>
       <div
         id="GET IN TOUCH"
         class="flex  select-auto mx-auto items-center justify-center gap-3 sm:pb-1 w-[210px] sm:w-[410px] border-b-4 sm:border-b-8 border-[#38B7FF] border-primary font-black"
