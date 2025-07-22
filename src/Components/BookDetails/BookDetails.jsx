@@ -91,18 +91,22 @@ const books = [
 ];
 
 const BookDetails = () => {
-  //set-1 get id
+  //step:1 -- এখানে Books.jsx থেকে পাঠানো আইডি কে UseParams দিয়ে ধরা হয়েছে ।
   const { id } = useParams();
-  // get single book/ data store this userState
+
+  //Step: 3 --  getSingleBook দিয়ে find করে আমরা যে আইডি/ডাটা পেয়েছি সেটা এই স্টেটে ব্যবহারের জন্য সেট করা হইছে।
   const [getSingleBook, setBook] = useState();
 
+  // Step: 2 --
+  // প্রথমে useEffect Hook কল করা হইছে useEffect (()=>{........},[]) ।
+  //  Find করে প্রত্যেকটা বইয়ের আইডি কে ধরা হইয়েছে এবং
+  //  Number(id); এটা দিয়ে স্ট্রিং এ থাকা আইডি কে নাম্বারে পরিবর্তন করা হইছে।
   useEffect(() => {
     const result = books.find((book) => book?.id === Number(id));
     setBook(result);
   }, []);
 
   return (
-
     // Start from Here
     <div className="grid lg:grid-cols-2 items-center  lg:gap-10 mt-4">
       <div className="">
@@ -112,7 +116,7 @@ const BookDetails = () => {
       <div>
         <h1 className="text-5xl font-bold">{getSingleBook?.title}</h1>
         <h2 className="mt-6 text-lg text-gray-700 font-semibold">
-          Writer : {getSingleBook?.writer}
+          Author : {getSingleBook?.writer}
         </h2>
         {/* line____________________________ */}
         <div className="border-b  border-green-700 mt-6"></div>
@@ -154,18 +158,18 @@ const BookDetails = () => {
           <div className="flex items-center text-center gap-6 mt-6">
             <h1 className="text-gray-700">Number of Pages :</h1>
             <div className=" bg-green-600 h-[1px] w-[200px]"></div>
-            <h2 className=" font-bold">281</h2>
+            <h2 className=" font-bold">{getSingleBook?.page}</h2>
           </div>
 
           <div className="flex items-center gap-6 text-center mt-2">
             <h1 className="text-gray-700">Writer :</h1>
             <div className=" bg-green-600 h-[1px] w-[200px]"></div>
-            <h2 className="font-bold">Shuvo</h2>
+            <h2 className="font-bold">{getSingleBook?.writer}</h2>
           </div>
           <div className="flex items-center text-center gap-6 mt-2">
             <h1 className="text-gray-700">Year of Publishing :</h1>
             <div className=" bg-green-600 h-[1px] w-[200px]"></div>
-            <h2 className="font-bold">1980</h2>
+            <h2 className="font-bold">{getSingleBook?.publish}</h2>
           </div>
           <div className="flex items-center text-center gap-6 mt-2">
             <h1 className="text-gray-700">Raing :</h1>
