@@ -6,7 +6,8 @@
 * Daisy UI এবং Component Land ব্যাবহার করেছি ।
 * Dynamically ডাটা লোড ও শো করেছি ।
 * কিভাবে Route করে একই পেইজের ভিতরে অনেক পেইজ আনা যায় সেটা করেছি ।
-* Get in Touch পেইজ বানানো হইয়েছে
+* Get in Touch পেইজ বানানো হইয়েছে ।
+* Support পেইজ 
 
 
 
