@@ -10,9 +10,10 @@ const books = [
     booksType: "Self-help",
     writer: "James Clear",
     rating: 4.8,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/s2xMk7rd/1.jpg",
     page: 211,
     publish: 1860,
+    price: 1270,
   },
   {
     id: 2,
@@ -21,9 +22,10 @@ const books = [
     booksType: "Productivity",
     writer: "Cal Newport",
     rating: 4.6,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/zvZ3HQR8/2.jpg",
     page: 304,
     publish: 2016,
+    price: 1700,
   },
   {
     id: 3,
@@ -32,9 +34,10 @@ const books = [
     booksType: "Spirituality",
     writer: "Eckhart Tolle",
     rating: 4.7,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/7h3h3Ng7/3.jpg",
     page: 236,
     publish: 1997,
+    price: 1100,
   },
   {
     id: 4,
@@ -43,9 +46,10 @@ const books = [
     booksType: "Memoir",
     writer: "David Goggins",
     rating: 4.9,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/B61X63bm/4.jpg",
     page: 364,
     publish: 2018,
+    price: 900,
   },
   {
     id: 5,
@@ -54,9 +58,10 @@ const books = [
     booksType: "Psychology",
     writer: "Daniel Kahneman",
     rating: 4.4,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/xjMXV9WC/5.jpg",
     page: 499,
     publish: 2011,
+    price: 700,
   },
   {
     id: 6,
@@ -65,9 +70,10 @@ const books = [
     booksType: "Self-help",
     writer: "Mark Manson",
     rating: 4.5,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/8zPcvMsJ/6.jpg",
     page: 224,
     publish: 2016,
+    price: 2300,
   },
   {
     id: 7,
@@ -76,9 +82,10 @@ const books = [
     booksType: "Finance",
     writer: "Robert Kiyosaki",
     rating: 4.7,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/KvbRZd25/7.jpg",
     page: 336,
     publish: 1997,
+    price: 600,
   },
   {
     id: 8,
@@ -87,9 +94,10 @@ const books = [
     booksType: "Philosophy",
     writer: "Jordan B. Peterson",
     rating: 4.6,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/K8qzDjg9/8.jpg",
     page: 409,
     publish: 2018,
+    price: 2200,
   },
   {
     id: 9,
@@ -98,9 +106,10 @@ const books = [
     booksType: "Self-help",
     writer: "Stephen R. Covey",
     rating: 4.8,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/43Y3LG6X/9.jpg",
     page: 381,
     publish: 1989,
+    price: 1700,
   },
   {
     id: 10,
@@ -109,9 +118,10 @@ const books = [
     booksType: "Motivational",
     writer: "William H. McRaven",
     rating: 4.6,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/Y0HqCmJS/10.jpg",
     page: 144,
     publish: 2017,
+    price: 800,
   },
   {
     id: 11,
@@ -120,9 +130,10 @@ const books = [
     booksType: "Philosophy",
     writer: "Ryan Holiday",
     rating: 4.5,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/J7NzdPkH/11.jpg",
     page: 256,
     publish: 2016,
+    price: 2000,
   },
   {
     id: 12,
@@ -131,9 +142,10 @@ const books = [
     booksType: "Leadership",
     writer: "Simon Sinek",
     rating: 4.6,
-    cover: lightBook,
+    cover: "https://i.postimg.cc/gjHcX2WH/12-white-book.jpg",
     page: 256,
     publish: 2009,
+    price: 1600,
   },
 ];
 
@@ -149,12 +161,11 @@ const Books = () => {
               class="mb-4 overflow-hidden rounded-xl border text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl"
             >
               {/* card image */}
-              <div className="">
+              <div className="w-full h-[220px] overflow-hidden rounde">
                 <img
-                  className=" h-[80px] w-[100%] "
                   src={book.cover}
                   alt=""
-                  class=""
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -191,7 +202,7 @@ const Books = () => {
                 <ul class="m-0 flex list-none items-center justify-between px-0 pt-6 pb-0">
                   <li class="text-left">
                     <span class="text-sm text-gray-400">Price</span>
-                    <p class="m-0 text-base font-medium">$5000</p>
+                    <p class="m-0 text-base font-medium">{book?.price} ৳</p>
                   </li>
 
                   <li class="text-left">

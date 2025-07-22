@@ -10,6 +10,8 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import BookDetails from "./Components/BookDetails/BookDetails";
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
+import Support from "./Components/Support/Support";
+import GetinTouch from "./Components/GetinTouch/GetinTouch";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/SignUp",
         element: <SignUp />,
+      },
+      {
+        path: "/Support",
+        element: <Support/>,
+      },
+      {
+        path: "/GetinTouch",
+        element: <GetinTouch/>,
       },
     ],
   },

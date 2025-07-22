@@ -104,13 +104,13 @@ const BookDetails = () => {
   useEffect(() => {
     const result = books.find((book) => book?.id === Number(id));
     setBook(result);
-  }, []);
+  }, [id]);
 
   return (
     // Start from Here
     <div className="grid lg:grid-cols-2 items-center  lg:gap-10 mt-4">
       <div className="">
-        <img className="lg:h-[600px]" src={getSingleBook?.cover} alt="" />
+        <img className="lg:h-[600px]" src={`/src/assets/images/1.jpg ${getSingleBook.cover}`} alt="" />
       </div>
       {/* Details Text */}
       <div>

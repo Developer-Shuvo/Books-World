@@ -55,12 +55,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li class="mr-1">
-              <a
+              <Link
                 class="text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white "
-                href="#"
+                to ="/Dashboard"
               >
                 Page To Read
-              </a>
+              </Link>
             </li>
           </ul>
           <hr class="mt-4 w-full lg:hidden" />
