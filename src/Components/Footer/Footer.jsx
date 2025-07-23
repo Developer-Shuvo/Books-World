@@ -18,9 +18,9 @@ const Footer = () => {
           <Link to="Support" class="font-medium text-white">
             Support
           </Link>
-          <a href="#" class="font-medium text-white">
+          <Link to="/PrivacyPolicy" class="font-medium text-white">
             Privacy Policy
-          </a>
+          </Link>
           <a href="#" class="font-medium text-white">
             Terms & Conditions
           </a>

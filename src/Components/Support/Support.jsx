@@ -25,29 +25,29 @@ const Support = () => {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                123 Book Street, BoiPoka City, Dhaka, Bangladesh
+               315, 5 E Nakhalpara Rd, Dhaka 1215
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-red-500 leading-relaxed" href="mailto:example@email.com">
-                example@email.com
+              <a className="text-red-500 leading-relaxed" href="mailto:im.computer.engineeer@gmail.com">
+               im.computer.engineeer@gmail.com
               </a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="leading-relaxed">+880-123-456789</p>
+              <p className="leading-relaxed">+880-1817422784</p>
             </div>
           </div>
         </div>
 
         {/* Feedback Form */}
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Support</h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            We’d love to hear your thoughts about our bookstore.
+            If need any support then Write here.
           </p>
 
           <div className="relative mb-4">

@@ -1,7 +1,7 @@
 const GetinTouch = () => {
   return (
     <section id="CallMe" class="relative py-14 mt-[100px] bg-black">
-      <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-lime-600 top-[200px] ml-[20%]"></div>
+      <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-orange-600 top-[200px] ml-[20%]"></div>
       <div
         id="GET IN TOUCH"
         class="flex  select-auto mx-auto items-center justify-center gap-3 sm:pb-1 w-[210px] sm:w-[410px] border-b-4 sm:border-b-8 border-[#38B7FF] border-primary font-black"
@@ -61,7 +61,9 @@ const GetinTouch = () => {
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
             <a target="_blank" href="https://wa.me/123456789">
-              +123456789
+              <span className="text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                +8801817422784
+              </span>
             </a>
           </p>
         </div>
@@ -95,7 +97,7 @@ const GetinTouch = () => {
             telegram
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
-            <a target="_blank" href="https://t.me/username">
+            <a target="_blank" href="https://web.telegram.org/k/">
               UserName
             </a>
           </p>
@@ -122,8 +124,8 @@ const GetinTouch = () => {
             location
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
-            <a target="_blank" href="location">
-              Syria Aleppo
+            <a target="_blank" href="https://maps.app.goo.gl/DN9APwQKi4v5iJcx8">
+              My Location
             </a>
           </p>
         </div>
@@ -163,7 +165,7 @@ const GetinTouch = () => {
               target="_blank"
               href="https://www.linkedin.com/in/abdulbasit-abdulgani"
             >
-              Abdulbasit
+              Shuvo
             </a>
           </p>
         </div>
@@ -185,8 +187,8 @@ const GetinTouch = () => {
             github
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
-            <a target="_blank" href="https://github.com/3bd0sy">
-              @3bd0sy
+            <a target="_blank" href="https://github.com/Developer-Shuvo">
+              Github Here
             </a>
           </p>
         </div>
@@ -216,7 +218,7 @@ const GetinTouch = () => {
             email
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
-            <a target="_blank" href="mailto:ax.abdo.syrain@gmail.com">
+            <a target="_blank" href="im.computer.engineeer@gmail.com">
               Email me
             </a>
           </p>
