@@ -151,13 +151,13 @@ export const books = [
 const Books = () => {
   return (
     <>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7">
+      <div className="mt-16 px-6 md:px-4 lg:px-2 xl:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
         {/* Here I do Map and inside my card content */}
         {books?.map((book) => (
           <>
             <article
               key={book?.id}
-              class="mb-4 overflow-hidden rounded-xl border  text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl hover:shadow-yellow-600"
+              class="mb-4 overflow-hidden rounded-xl border  text-gray-700 shadow-md duration-500 ease-in-out hover:shadow-xl hover:shadow-orange-600"
             >
               {/* card image */}
               <div className="w-full h-[220px] overflow-hidden">
@@ -193,7 +193,7 @@ const Books = () => {
                   {/* // এখান থেকে আমার সব বইয়ের আইডি Book Details পেইজে পাঠানো হয়েছে। */}
                   <Link
                     to={`/Books/${book?.id}`}
-                    className="text-sm font-semibold bg-green-700 rounded-lg py-1 px-3 text-white inline-block"
+                    className="text-sm font-semibold bg-lime-700 hover:bg-purple-600 rounded-lg py-1 px-3 text-white inline-block transition-transform duration-300 ease-in-out hover:-translate-x-1.5"
                   >
                     See Details
                   </Link>

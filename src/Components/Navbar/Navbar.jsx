@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <header class="text-slate-700 relative mx-auto flex flex-col overflow-hidden  py-4 lg:flex-row lg:items-center">
-        <a
-          href="#"
-          class="flex items-center whitespace-nowrap text-2xl font-black"
+      <header class="text-slate-700 relative mx-auto flex flex-col overflow-hidden  py-4  lg:flex-row lg:items-center ">
+        <Link
+          to="/"
+          class="flex items-center whitespace-nowrap text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-black pl-2 md:pl-0 lg:pl-0 xl:pl-0"
         >
           <span class=" ">
             <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
           </span>
-          Books World
-        </a>
+          <span className="hover:text-black transition-transform duration-300 ease-in-out hover:-translate-x-0.5">
+            Books World
+          </span>
+        </Link>
         <input type="checkbox" class="peer hidden" id="navbar-open" />
         <label
           class="absolute top-5 right-5 cursor-pointer lg:hidden"
@@ -40,15 +42,16 @@ const Navbar = () => {
           <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
             <li class="mr-1">
               <Link
-                className=" text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white  "
                 href="/"
+                className="text-gray-700 px-4 py-1 border rounded-md border-transparent transition-transform duration-500 ease-in-out 
+                 focus:outline-none focus:bg-black focus:text-white hover:text-black hover:-translate-x-0.5 "
               >
                 Home
               </Link>
             </li>
             <li class="mr-1">
               <Link
-                class="text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white "
+                className="text-gray-700 px-4 py-1 border rounded-md border-transparent transition-transform duration-500 ease-in-out focus:outline-none focus:bg-black focus:text-white hover:text-black hover:-translate-x-0.5"
                 to="/Books"
               >
                 Listed Books
@@ -56,8 +59,8 @@ const Navbar = () => {
             </li>
             <li class="mr-1">
               <Link
-                class="text-gray-700 px-4 py-1 border rounded-md border-transparent transition focus:outline-none focus:bg-black focus:text-white "
-                to ="/Dashboard"
+                className="text-gray-700 px-4 py-1 border rounded-md border-transparent transition-transform duration-500 ease-in-out focus:outline-none focus:bg-black focus:text-white hover:text-black hover:-translate-x-0.5"
+                to="/Dashboard"
               >
                 Page To Read
               </Link>

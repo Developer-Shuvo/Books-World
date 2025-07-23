@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer class="relative flex flex-col justify-center mt-20 bg-gray-900 px-4 pt-20">
+      <footer class="relative flex flex-col justify-center mt-40 bg-gray-900 px-4 pt-20 ">
         <div class="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 rounded-xl border-4 border-orange-500 bg-white p-2">
           <img class="h-full object-contain" src="" alt="" />
         </div>
@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
         </nav>
         <p class="py-10 text-center text-gray-300">
-          © 2025 Developer-Shuvo | All Rights Reserved
+         <span className="text-lime-600"> © 2025</span> Developer-Shuvo |<span className="text-red-600"> All Rights Reserved</span>
         </p>
       </footer>
     </div>
