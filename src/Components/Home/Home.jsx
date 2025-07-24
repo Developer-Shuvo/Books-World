@@ -12,7 +12,7 @@ const Home = () => {
           </h1>
           {/* Button */}
           <Link to="/Books">
-            <button className="text-white bg-lime-600 hover:bg-purple-600 transition-transform duration-300 ease-in-out hover:-translate-x-2.5 px-3 md:px-4 lg:px-5 xl:px-6 py-2 md:py-3  rounded-lg lg:mt-10 mt-6">
+            <button className="text-white bg-lime-600 hover:bg-purple-600 transition-transform duration-500 ease-in-out hover:-translate-x-2.5 px-3 md:px-4 lg:px-5 xl:px-6 py-2 md:py-3  rounded-lg lg:mt-10 mt-6">
               View The List
             </button>
           </Link>

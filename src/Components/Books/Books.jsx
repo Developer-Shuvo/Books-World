@@ -171,12 +171,12 @@ const Books = () => {
               <div class="p-4">
                 {/* title */}
                 <div class="pb-6">
-                  <a
-                    href="#"
-                    class="text-lg hover:text-green-600 font-medium duration-500 ease-in-out"
+                  <Link
+                    to={`/Books/${book?.id}`}
+                    class="text-lg hover:text-green-700 font-medium duration-500 ease-in-out"
                   >
                     {book.title}
-                  </a>
+                  </Link>
                 </div>
                 {/* Writer & Details */}
                 <div class="box-border flex list-none justify-between items-center border-t border-b border-solid border-gray-200 px-0 py-3">
@@ -193,7 +193,7 @@ const Books = () => {
                   {/* // এখান থেকে আমার সব বইয়ের আইডি Book Details পেইজে পাঠানো হয়েছে। */}
                   <Link
                     to={`/Books/${book?.id}`}
-                    className="text-sm font-semibold bg-lime-700 hover:bg-purple-600 rounded-lg py-1 px-3 text-white inline-block transition-transform duration-300 ease-in-out hover:-translate-x-1.5"
+                    className="text-sm font-semibold bg-lime-700 hover:bg-orange-600 rounded py-1 px-3 text-white inline-block transition-transform duration-500 ease-in-out hover:-translate-x-1.5"
                   >
                     See Details
                   </Link>

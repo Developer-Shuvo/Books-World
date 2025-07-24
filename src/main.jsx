@@ -14,6 +14,7 @@ import SignUp from "./Components/SignUp/SignUp";
 import Support from "./Components/Support/Support";
 import GetinTouch from "./Components/GetinTouch/GetinTouch";
 import PrivacyPolicy from "./Components/Privacy & Policy/Privacy&Policy";
+import Profile from "./Components/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/PrivacyPolicy",
         element: <PrivacyPolicy/>
+      },
+      {
+        path: "/Profile",
+        element: <Profile/>
       },
     ],
   },
