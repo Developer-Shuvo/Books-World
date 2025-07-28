@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import bannerImg from "../../assets/images/books.png";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
-    <div className="bg-[#212121]  rounded-2xl lg:mt-8 mt-4 ">
+    <div className="bg-[#212121] rounded-xl lg:mt-8 mt-4 mx-4 md:mx-0 lg:mx-0">
+      {/* Helmet */}
+      <Helmet>
+        <title>Books World | Home</title>
+      </Helmet>
+
       <div className="flex flex-col lg:flex-row items-center justify-between px-16 py-12  lg:px-20 lg:py-20 gap-10 lg:gap-[40px]">
         {/* Text Section */}
         <div className="text-center lg:text-left">

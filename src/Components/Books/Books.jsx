@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 //Here is Books Object 12
@@ -151,6 +152,9 @@ export const books = [
 const Books = () => {
   return (
     <>
+    <Helmet>
+      <title>Books world | Books</title>
+      </Helmet>
       <div className="mt-16 px-6 md:px-4 lg:px-2 xl:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
         {/* Here I do Map and inside my card content */}
         {books?.map((book) => (
@@ -201,12 +205,12 @@ const Books = () => {
 
                 <ul class="m-0 flex list-none items-center justify-between px-0 pt-6 pb-0">
                   <li class="text-left">
-                    <span class="text-sm text-gray-400">Price</span>
-                    <p class="m-0 text-base font-medium">{book?.price} ৳</p>
+                    <span class="text-[18px] text-gray-400">Price</span>
+                    <p class="m-0 text-[20px] font-medium">{book?.price} ৳</p>
                   </li>
 
                   <li class="text-left">
-                    <span class="text-sm text-gray-400 flex items-center justify-center">
+                    <span class="text-[18px] text-gray-400 flex items-center justify-end">
                       Rating
                     </span>
                     <ul class="m-0 flex items-center p-0 font-medium">

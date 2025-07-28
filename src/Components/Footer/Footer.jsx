@@ -5,9 +5,9 @@ import shuvo from "../Footer/images/Shuvo.jpg";
 const Footer = () => {
   return (
     <div>
-      <footer class="relative flex flex-col justify-center mt-40 bg-gray-900 px-4 pt-20 ">
+      <footer class="relative flex flex-col justify-center mt-40  bg-gray-900 px-4 pt-20 ">
         {/* Footer image */}
-        <div class="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 rounded-xl  bg-lime-600 hover:bg-orange-500 hover:text-lime-600 ease-in-out duration-300 p-[2px] ">
+        <div class="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 rounded-xl  bg-sky-600 hover:bg-orange-500 hover:text-lime-600 ease-in-out duration-500 p-[2px] ">
           <img class="h-full w-full object-cover rounded-xl" src={shuvo} alt="" />
         </div>
         <nav

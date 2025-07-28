@@ -1,6 +1,13 @@
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
 const GetinTouch = () => {
   return (
     <section id="CallMe" class="relative py-14 mt-[100px] bg-black">
+      {/* Helmet */}
+      <Helmet>
+        <title>Books World | Get in Touch</title>
+      </Helmet>
       <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-orange-600 top-[200px] ml-[20%]"></div>
       <div
         id="GET IN TOUCH"
@@ -218,8 +225,12 @@ const GetinTouch = () => {
             email
           </h3>
           <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">
-            <a target="_blank" href="im.computer.engineeer@gmail.com">
-              Email me
+            <a
+              href="https://mail.google.com/mail/u/0/#sent"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Email Me
             </a>
           </p>
         </div>

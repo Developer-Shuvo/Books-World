@@ -6,3 +6,48 @@
 .borders{
   border: 2px solid red;
 }
+
+/* All Pages Cursor is None now */
+* {
+  cursor: none;
+}
+
+/* Bubble effect styling */
+ .bubble {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(84, 248, 8, 0.688), rgba(4, 58, 76, 0.841), rgba(245, 3, 3, 0.951));
+  box-shadow:
+    inset -4px -4px 8px rgba(249, 24, 24, 0.642),
+    inset 4px 4px 12px rgba(5, 13, 74, 0.257),
+    0 0 20px rgba(255, 0, 0, 0.788);
+  backdrop-filter: blur(4px);
+  animation: float 4s ease-in-out infinite, bubble-shake 1.5s ease-in-out infinite;
+  transition: transform 0.1s ease;
+} */
+
+/* Bubble floating animation */
+ @keyframes float {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+} */
+
+/* Bubble wobble/shake effect */
+@keyframes bubble-shake {
+  %, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(0.5deg);
+  }
+}
+

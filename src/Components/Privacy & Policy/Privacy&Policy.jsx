@@ -1,8 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800 bg-stone-100 rounded-lg shadow-md border border-gray-400">
+    <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800 bg-stone-100 rounded-lg shadow-md border border-gray-400 mt-8">
+      {/* Helmet */}
+      <Helmet>
+        <title>Books World | Privacy Policy</title>
+      </Helmet>
       <h1 className="text-4xl font-bold mb-6 border-b-2 border-green-600 pb-4 ">Privacy Policy</h1>
       <p className="mb-4 text-sm text-gray-600">Last updated: July 23, 2025</p>
 

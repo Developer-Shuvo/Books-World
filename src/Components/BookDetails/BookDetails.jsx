@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { books } from "../Books/Books";
+import { Helmet } from "react-helmet-async";
 
 const BookDetails = () => {
   //step:1 -- এখানে Books.jsx থেকে পাঠানো আইডি কে UseParams দিয়ে ধরা হয়েছে ।
@@ -21,7 +22,15 @@ const BookDetails = () => {
 
   return (
     // -----_______Start from Here_______-----
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 md:gap-8 lg:gap-10 mt-4 px-4 sm:px-6">
+    <div
+      className="grid grid-cols-1 lg:grid-cols-2 
+    items-center gap-6 md:gap-8 lg:gap-10 mt-4 px-4 sm:px-6"
+    >
+      {/* Helmet Provider Added */}
+      <Helmet>
+        <title>Books World | Books Details</title>
+      </Helmet>
+
       {/* Image Section */}
       <div className="flex justify-center lg:justify-start">
         <img

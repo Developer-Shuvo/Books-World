@@ -1,4 +1,3 @@
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -15,12 +14,15 @@ import Support from "./Components/Support/Support";
 import GetinTouch from "./Components/GetinTouch/GetinTouch";
 import PrivacyPolicy from "./Components/Privacy & Policy/Privacy&Policy";
 import Profile from "./Components/Profile/Profile";
+import BubbleCursor from "./Components/BubbleCursor/BubbleCursor";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     errorElement: <Error></Error>,
+    bubbleElement: <BubbleCursor />,
     children: [
       {
         path: "/",
@@ -34,8 +36,7 @@ const router = createBrowserRouter([
         path: "/Books",
         element: <Books></Books>,
       },
-      { path: "/Books/:id", 
-        element: <BookDetails /> },
+      { path: "/Books/:id", element: <BookDetails /> },
       {
         path: "/SignIn",
         element: <SignIn />,
@@ -46,19 +47,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/Support",
-        element: <Support/>,
+        element: <Support />,
       },
       {
         path: "/GetinTouch",
-        element: <GetinTouch/>,
+        element: <GetinTouch />,
       },
       {
         path: "/PrivacyPolicy",
-        element: <PrivacyPolicy/>
+        element: <PrivacyPolicy />,
       },
       {
         path: "/Profile",
-        element: <Profile/>
+        element: <Profile />,
       },
     ],
   },
@@ -66,6 +67,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>
 );

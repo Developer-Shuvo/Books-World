@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Support = () => {
     return (
         <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+         {/* Helmet */}
+              <Helmet>
+                <title>Books World | Support</title>
+              </Helmet>
         {/* Google Map */}
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe

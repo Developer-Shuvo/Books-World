@@ -4,7 +4,7 @@ const Dashboard = () => {
       {/* Top Grid */}
       <div className="pt-24 pb-16 text-lg md:text-xl lg:text-2xl  grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-screen-lg mx-auto text-center">
         {/* Card 1 */}
-        <div className="px-4 py-6 shadow-lg shadow-lime-600 rounded-lg">
+        <div className="px-4 py-6 shadow-lg shadow-lime-600 hover:shadow-purple-600 ease-in-out duration-500 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-14 w-14 mx-auto rounded-xl bg-blue-50 p-4 text-blue-300"
@@ -40,7 +40,7 @@ const Dashboard = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="px-4 py-6 shadow-lg shadow-red-600 rounded-lg">
+        <div className="px-4 py-6 shadow-lg shadow-red-600 hover:shadow-purple-600 ease-in-out duration-500 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-14 w-14 mx-auto rounded-xl bg-rose-50 p-4 text-rose-300"
@@ -75,7 +75,7 @@ const Dashboard = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="px-4 py-6 shadow-lg shadow-blue-600 rounded-lg">
+        <div className="px-4 py-6 shadow-lg shadow-blue-600 hover:shadow-purple-600 ease-in-out duration-500 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-14 w-14 mx-auto rounded-xl bg-green-50 p-4 text-green-300"

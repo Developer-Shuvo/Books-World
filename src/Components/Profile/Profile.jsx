@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
 import profile from "../Profile/images/Shuvo.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   return (
     // Start From Here .....
   
-    <div className=" flex items-center justify-center mt-8">
+    <div className=" flex items-center justify-center mt-8 px-2">
+
+      {/* Helmet */}
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       {/* Profile Card */}
       <div className="w-[700px] h-[500px] bg-gray-900 rounded text-left overflow-hidden  transform transition-all">
         <div className="relative w-full h-full mx-auto flex flex-col justify-center items-center text-center">
           <img
             src={profile}
             alt="Profile"
-            className="w-40 h-40 rounded-xl object-cover shadow-lg shadow-yellow-600 "
+            className="w-40 h-40 rounded-xl object-cover shadow-lg shadow-yellow-600 hover:shadow-purple-600 ease-in-out duration-500"
           />
           {/* Name */}
           <p className="mt-8 text-5xl font-semibold text-white tracking-tight">

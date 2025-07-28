@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import BubbleCursor from "../BubbleCursor/BubbleCursor";
 
 const Root = () => {
   return (
@@ -11,6 +12,11 @@ const Root = () => {
       </div>
 
       <Footer></Footer>
+
+      {/* Bubble Cursor Here */}
+        <BubbleCursor />
+
+      
     </div>
   );
 };
