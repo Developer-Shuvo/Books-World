@@ -32,7 +32,7 @@ const Footer = () => {
           </Link>
         </nav>
         <p class="py-10 text-center text-gray-300">
-         <span className="text-lime-600"> © 2025</span> Developer-Shuvo |<span className="text-red-600"> All Rights Reserved</span>
+         <span className="text-lime-600"> © 2025</span> Developer-Shuvo |<span className="text-orange-500"> All Rights Reserved</span>
         </p>
       </footer>
     </div>

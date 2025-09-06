@@ -1,95 +1,129 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Auto-close menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  // Auto-close menu when scrolling
+  useEffect(() => {
+    const handleScroll = () => setIsOpen(false);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Animation Variants for menu
+  const menuVariants = {
+    hidden: { y: "-100%", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.4, ease: "easeInOut" },
+    },
+    exit: {
+      y: "-100%",
+      opacity: 0,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
+
   return (
-    <>
-      <header class="text-slate-700 sticky top-0 z-50 bg-white mx-auto flex flex-col py-4 lg:flex-row lg:items-center ">
+    <header className="sticky top-0 z-50 max-w-full mx-auto md:px-10 lg:px-20 bg-sky-100 bg-transparent  shadow-md">
+      <div className="flex items-center justify-between px-4 py-3 lg:px-8">
+        {/* Logo */}
         <Link
           to="/"
-          class="flex items-center whitespace-nowrap text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-black pl-2 md:pl-0 lg:pl-0 xl:pl-0"
+          className="flex items-center text-2xl md:text-3xl lg:text-4xl font-black"
         >
-          <span class=" ">
-            <img src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="" />
-          </span>
-          <span className="hover:text-black transition-transform duration-300 ease-in-out hover:-translate-x-0.5">
+          <img
+            src="/src/assets/images/books.png"
+            alt="Logo"
+            className="h-8 mr-2"
+          />
+          <span className="hover:text-black transition duration-300">
             Books World
           </span>
         </Link>
-        <input type="checkbox" class="peer hidden" id="navbar-open" />
-        <label
-          class="absolute top-5 right-5 cursor-pointer lg:hidden"
-          for="navbar-open"
-        >
-          <svg
-            class="h-7 w-7"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </label>
-        <nav
-          aria-label="Header Navigation"
-          class="peer-checked:pt-8 peer-checked:max-h-60 flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row "
-        >
-          <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center  lg:space-y-0">
-            <li class="mr-1">
-              <Link
-                href="/"
-                className="text-gray-700 px-4 py-1 rounded border-transparent 
-           transition duration-500 ease-in-out 
-           focus:outline-none focus:bg-black focus:text-white 
-           hover:text-black hover:-translate-y-1.5 hover:bg-slate-200"
-              >
-                Home
-              </Link>
-            </li>
-            <li class="mr-1">
-              <Link
-                className="text-gray-700 px-4 py-1 rounded border-transparent 
-           transition duration-500 ease-in-out 
-           focus:outline-none focus:bg-black focus:text-white 
-           hover:text-black hover:-translate-y-1.5 hover:bg-slate-200"
-                to="/Books"
-              >
-                Listed Books
-              </Link>
-            </li>
-            <li class="mr-1">
-              <Link
-                className="text-gray-700 px-4 py-1 rounded border-transparent 
-           transition duration-500 ease-in-out 
-           focus:outline-none focus:bg-black focus:text-white 
-           hover:text-black hover:-translate-y-1.5 hover:bg-slate-200"
-                to="/Dashboard"
-              >
-                Page To Read
-              </Link>
-            </li>
-          </ul>
-          <hr class="mt-4 w-full lg:hidden" />
-          <div class="my-1 flex items-center space-x-4 lg:ml-auto lg:pr-1">
-            <Link to="/SignIn" title="">
-              <button class="whitespace-nowrap rounded bg-lime-600 px-6 py-2 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-green-800 focus:ring-offset-2 hover:bg-lime-700">
-                Sign In
-              </button>
-            </Link>
-            <Link to="/SignUp" title="">
-              <button class="whitespace-nowrap rounded bg-blue-700 px-6 py-2 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-800 focus:ring-offset-2 hover:bg-blue-600">
-                Sign Up
-              </button>
-            </Link>
-          </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex space-x-6 font-medium">
+          <Link to="/" className="hover:text-blue-600 transition">
+            Home
+          </Link>
+          <Link to="/Books" className="hover:text-blue-600 transition">
+            Listed Books
+          </Link>
+          <Link to="/Dashboard" className="hover:text-blue-600 transition">
+            Page To Read
+          </Link>
         </nav>
-      </header>{" "}
-    </>
+
+        {/* Desktop Buttons */}
+        <div className="hidden lg:flex space-x-4">
+          <Link to="/SignIn">
+            <button className="rounded bg-lime-600 px-6 py-2 font-medium text-white transition-all hover:bg-lime-700">
+              Sign In
+            </button>
+          </Link>
+          <Link to="/SignUp">
+            <button className="rounded bg-blue-700 px-6 py-2 font-medium text-white transition-all hover:bg-blue-600">
+              Sign Up
+            </button>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-gray-700 text-2xl focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Menu with Framer Motion */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuVariants}
+            className="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-white text-xl z-40"
+          >
+            <Link to="/" className="hover:text-lime-400 transition">
+              Home
+            </Link>
+            <Link to="/Books" className="hover:text-lime-400 transition">
+              Listed Books
+            </Link>
+            <Link to="/Dashboard" className="hover:text-lime-400 transition">
+              Page To Read
+            </Link>
+
+            <div className="flex space-x-4 pt-4">
+              <Link to="/SignIn">
+                <button className="rounded bg-lime-600 px-6 py-2 font-medium text-white hover:bg-lime-700">
+                  Sign In
+                </button>
+              </Link>
+              <Link to="/SignUp">
+                <button className="rounded bg-blue-700 px-6 py-2 font-medium text-white hover:bg-blue-600">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 
