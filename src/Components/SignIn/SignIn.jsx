@@ -11,7 +11,7 @@ const SignIn = () => {
         <div class=" max-w-[600px] mx-auto space-y-3 rounded-md bg-white p-6 shadow-xl lg:p-10 border border-gray-100 m-10">
           {/* E-mail */}
           <div class="">
-            <label class=""> Email Address </label>
+            <label class="block mb-2 text-sm font-semibold"> Email Address </label>
             <input
               type="email"
               placeholder="Info@example.com"
@@ -20,7 +20,7 @@ const SignIn = () => {
           </div>
           {/* Password */}
           <div>
-            <label class=""> Password </label>
+            <label class="block mb-2 text-sm font-semibold"> Password </label>
             <input
               type="password"
               placeholder="******"
