@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaBars } from "react-icons/fa";
+import logo from "./books.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,18 +36,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 max-w-full mx-auto md:px-10 lg:px-20 bg-sky-100 bg-transparent  shadow-md">
+    <header className="sticky top-0 z-50 max-w-full mx-auto md:px-10 lg:px-20 bg-sky-200 bg-transparent   shadow-md">
       <div className="flex items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link
           to="/"
           className="flex items-center text-2xl md:text-3xl lg:text-4xl font-black"
         >
-          <img
-            src="/src/assets/images/books.png"
-            alt="Logo"
-            className="h-8 mr-2"
-          />
+          <img src={logo} alt="Logo" className="h-8 mr-2" />
           <span className="hover:text-black transition duration-300">
             Books World
           </span>
